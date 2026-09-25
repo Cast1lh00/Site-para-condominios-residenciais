@@ -1,7 +1,7 @@
 /* --- Correção do Alinhamento (Frente) --- */
 .conteudo {
     position: relative;
-    z-index: 2; /* Fica na frente do fundo animado */
+    z-index: 3; /* Fica na frente do fundo animado */
     height: 100vh;
     display: flex;
     flex-direction: column; /* FORÇA UM EM CIMA DO OUTRO */

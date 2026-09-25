@@ -80,7 +80,7 @@ if (formLogin) {
             try {
                 await signInWithEmailAndPassword(auth, email.value, senha.value);
                 alert("Login realizado com sucesso")
-                window.location.href = "index.html"
+                window.location.href = "tela_Inicial.html"
             } catch(error){
                 tratarErrorsFirebase(error.code);
             }

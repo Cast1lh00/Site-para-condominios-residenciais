@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'BAHNSCHRIFT';
+  src: url('fonts/BAHNSCHRIFT.TTF') format('typetrue');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    background-color: #FAF9F6; 
+    display: flex;
+    justify-content: center;          
+    overflow: hidden;
+    flex-direction: column; 
+
+}
+.cabecalho{
+    margin-top: 10px;
+    background-color: #E8F1F5;
+    border-radius: 12px;
+    width: 98vw;
+    height: 40px;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hamb {
+    background-color: #9AAEB8;
+    width: 30px;
+    height: 6px;
+    display: block;
+    border-radius: 12px;
+
+}
+.menu{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    gap: 5px;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+    border: none;
+}
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu.ativo {
+    transform: rotate(90deg);
+}
+
+.conteudo_menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.item1{
+    display: flex;
+    text-align: flex-start;
+    background-color: #E8F1F5;
+    padding: 20px;
+    width: 170px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    color: #9AAEB8;
+    transform: translateX(-300px);
+}
+.item2{
+    display: flex;
+    text-align: flex-start;
+    background-color: #E8F1F5;
+    padding: 20px;
+    width: 170px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    color: #9AAEB8;
+    transform: translateX(-300px);
+    transition-delay: 0.1s;
+}
+.item3{
+    display: flex;
+    text-align: flex-start;
+    background-color: #E8F1F5;
+    padding: 20px;
+    width: 170px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    color: #9AAEB8;
+    transform: translateX(-300px);
+    transition-delay: 0.2s;
+}
+.item4{
+    display: flex;
+    text-align: flex-start;
+    background-color: #E8F1F5;
+    padding: 20px;
+    width: 170px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    color: #9AAEB8;
+    transform: translateX(-300px);
+    transition-delay: 0.3s;
+}
+
+.item1.ativo{
+    transform: translateX(10px);
+}
+.item2.ativo{
+    transform: translateX(10px);
+    transition-delay: 0.1s;
+}
+.item3.ativo{
+    transform: translateX(10px);
+    transition-delay: 0.2s;
+}
+.item4.ativo{
+    transform: translateX(10px);
+    transition-delay: 0.3s;
+}
+.item1:hover{ 
+    transform: translateX(30px);
+    transition-delay: 0;
+}
+.item2:hover{
+    transform: translateX(30px);
+    transition-delay: 0;
+}
+.item3:hover{
+    transform: translateX(30px);
+    transition-delay: 0;
+}
+.item4:hover{
+    transform: translateX(30px);
+    transition-delay: 0;
+}

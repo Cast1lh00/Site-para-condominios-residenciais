@@ -7,11 +7,12 @@
 
 body{
     margin: 0;
-    background-color: #FAF9F6; 
     display: flex;
-    justify-content: center;          
+    background-color: #FAF9F6; 
+    display: flex;         
     overflow: hidden;
     flex-direction: column; 
+    width: 100vw;
 
 }
 .cabecalho{
@@ -19,11 +20,12 @@ body{
     background-color: #E8F1F5;
     border-radius: 12px;
     width: 98vw;
-    height: 40px;
+    height: 55px;
     gap: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
 }
 .hamb {
     background-color: #9AAEB8;
@@ -62,7 +64,8 @@ body{
     height: 250px;
     width: 100px;
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 70px;
+    position: absolute
 }
 .item1{
     display: flex;
@@ -75,6 +78,7 @@ body{
     font-family: 'BAHNSCHRIFT', sans-serif;
     color: #9AAEB8;
     transform: translateX(-300px);
+    gap: 10px;
 }
 .item2{
     display: flex;
@@ -88,6 +92,8 @@ body{
     color: #9AAEB8;
     transform: translateX(-300px);
     transition-delay: 0.1s;
+    gap: 10px;
+    
 }
 .item3{
     display: flex;
@@ -101,6 +107,7 @@ body{
     color: #9AAEB8;
     transform: translateX(-300px);
     transition-delay: 0.2s;
+    gap: 10px;
 }
 .item4{
     display: flex;
@@ -114,6 +121,7 @@ body{
     color: #9AAEB8;
     transform: translateX(-300px);
     transition-delay: 0.3s;
+    gap: 10px;
 }
 
 .item1.ativo{
@@ -134,16 +142,86 @@ body{
 .item1:hover{ 
     transform: translateX(30px);
     transition-delay: 0;
+    cursor: pointer;
 }
 .item2:hover{
     transform: translateX(30px);
     transition-delay: 0;
+    cursor: pointer;
 }
 .item3:hover{
     transform: translateX(30px);
     transition-delay: 0;
+    cursor: pointer;
 }
 .item4:hover{
     transform: translateX(30px);
     transition-delay: 0;
+    cursor: pointer;
+}
+.item1 img{
+    width: auto;
+    height: 20px;
+}
+.item2 img{
+    width: auto;
+    height: 20px;
+}
+.item3 img{
+    width: auto;
+    height: 20px;
+}
+.item4 img{
+    width: auto;
+    height: 15px;
+}
+
+.divisoriaHorizontal{
+    background-color: #9AAEB8;
+    height: 80vh;
+    width: 3px;
+    margin-left: 70vw;
+    margin-top: 80px    ;
+    position:absolute;
+    border-radius: 12px;
+
+}
+
+.lateral{
+    margin-left: 73vw;
+    margin-top: 50px;
+    background-color: transparent;
+    font-family: 'BAHNSCHRIFT';
+    display: flex;
+    flex-direction: column;
+}
+.lateral img{
+    width: 385px;
+    height: 385px;
+}
+
+h1{
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    color: #35444D;
+    line-height: 0.85px;
+    text-align: start;
+}   
+
+h3{
+    font-size: 43px;
+    display: flex;
+    flex-direction: column;
+    color: #35444D;
+    line-height: 0.85px;
+    text-align: start;
+}
+
+.cabecalho img{
+    height: auto;
+    width: 35px;
+    align-self: end;
+    position: absolute;
+    margin-right: 10px;
 }

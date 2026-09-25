@@ -1,0 +1,133 @@
+/* --- Correção do Alinhamento (Frente) --- */
+.conteudo {
+    position: relative;
+    z-index: 2; /* Fica na frente do fundo animado */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* FORÇA UM EM CIMA DO OUTRO */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px; /* Espaço entre o texto e o botão */
+}   
+
+/* --- Correção dos Triângulos (Fundo) --- */
+.fundo-animado {
+    position: fixed;
+    top: 0;     
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Fica atrás de tudo */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ATENÇÃO: Esta classe garante o movimento e a transparência sutil */
+.triangulo {
+    position: absolute;
+    fill: rgba(53, 68, 77, 0.08); /* Cor cinza escuro bem suave */
+    animation: moverDiagonal 15s linear infinite;
+}
+
+/* Animação que faz andar na diagonal e girar */
+@keyframes moverDiagonal {
+    0% {
+        transform: translate(-150px, 100vh) rotate(0deg);
+    }
+    100% {
+        transform: translate(100vw, -150px) rotate(360deg);
+    }
+}
+
+.t1 {
+    width: 80px;
+    left: 10%;
+    top: 20%; /* Começa já no meio da tela */
+    animation-duration: 14s;
+}
+
+.t2 {
+    width: 130px;
+    left: 35%;
+    top: 60%; /* Começa mais abaixo */
+    animation-duration: 20s;
+}
+
+.t3 {
+    width: 60px;
+    left: 75%;
+    top: 10%; /* Começa perto do topo */
+    animation-duration: 11s;
+}
+
+.t4 {
+    width: 160px;
+    left: 20%;
+    top: 80%; /* Começa bem embaixo */
+    animation-duration: 25s;
+}
+.t5 {
+    width: 90px;
+    left: 50%;
+    top: 30%;
+    animation-duration: 16s;
+}
+
+.t6 {
+    width: 110px;
+    left: 85%;
+    top: 70%;
+    animation-duration: 18s;
+}
+
+@keyframes moverDiagonalInverso {
+    0% {
+        /* Começa no topo direito (fora da tela) */
+        transform: translate(100vw, -150px) rotate(360deg);
+    }
+    100% {
+        /* Termina na base esquerda (fora da tela) */
+        transform: translate(-150px, 100vh) rotate(0deg);
+    }
+}   
+
+.t6 {
+    width: 110px;
+    left: 85%;
+    top: 70%;
+    animation-duration: 18s;
+    animation-name: moverDiagonalInverso;
+}
+
+.t7 {
+    width: 70px;
+    left: 15%;
+    top: 45%;
+    animation-duration: 13s;
+    animation-name: moverDiagonalInverso;
+}
+
+.t8 {
+    width: 140px;
+    left: 65%;
+    top: 90%;
+    animation-duration: 22s;
+    animation-name: moverDiagonalInverso;
+}
+
+.t9 {
+    width: 75px;
+    left: 40%;
+    top: 5%;
+    animation-duration: 15s;
+    animation-name: moverDiagonalInverso;
+}
+
+.t10 {
+    width: 125px;
+    left: 90%;
+    top: 40%;
+    animation-duration: 19s;
+    animation-name: moverDiagonalInverso;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="fundo-animado">
+
+        <svg class="triangulo t1" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t2" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t3" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t4" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t5" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t6" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t7" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t8" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t9" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>
+        <svg class="triangulo t10" viewBox="0 0 100 100"><polygon points="50,15 90,85 10,85"/></svg>        
+
+    </div>
+    <section class="conteudo">
+        <form id="formLogin">
+                <div class="campos">
+                    <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email"
+                        placeholder="Digite seu Email."
+                        id="email"
+                        required 
+                         oninput="validarBotao()">
+                    </div>
+                    <div class="senha">
+                    <label for="senha">Senha:</label>       
+                    <input type="password"
+                    placeholder="Digite sua Senha."
+                    id="senha"
+                    required 
+                     oninput="validarBotao()">
+                    </div>
+                </div>
+                <div class="entrar">
+                <button type="submit" id="entrar" disabled> Entrar </button>
+                <a href="cadastro.html">
+                    Cadastre-se!
+                </a>
+                </div>
+        </form>
+    </section>  
+</body>
+
+<script type="module" src="scriptLogin.js"> </script>
+</html>

@@ -1,0 +1,31 @@
+b {
+    font-family: sans-serif;
+    color: #35444D;
+    font-size: 24px;
+}
+
+button {
+    background-color: transparent;
+    color: #35444D;
+    border: 1.5px solid #35444D;
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #35444D;
+    color: #FAF9F6;
+}
+
+body {
+    background-color: #FAF9F6;
+    margin: 0;
+    overflow: hidden;
+}
+

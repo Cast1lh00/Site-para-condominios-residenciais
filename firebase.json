@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "hadescastilho",
     "public": "public",
     "ignore": [
       "firebase.json",

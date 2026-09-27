@@ -229,13 +229,14 @@ aviso{ display: none; }
 
 #predio{
     position: absolute;
-    height: 80vh;
-    align-self: self-end;
+    width: 80vh;
+    aspect-ratio: 1.58/1;
+    bottom: -15vh;
     z-index: 2;
 }
 
 .anima-entrada {
-    animation: subir 1.2s ease-out forwards;
+    animation: subir 0.8s ease-out forwards;
 }
 
 .sem-animacao {

@@ -33,4 +33,14 @@ body {
     overflow: hidden;
 }
 
+/* ---------- celular ---------- */
+@media (max-width: 600px) {
+    b {
+        font-size: 18px;
+    }
 
+    .acesse {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+}

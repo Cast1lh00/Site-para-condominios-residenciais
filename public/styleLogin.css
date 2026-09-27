@@ -229,9 +229,9 @@ aviso{ display: none; }
 
 #predio{
     position: absolute;
-    width: 80vh;
-    aspect-ratio: 1.58/1;
-    bottom: -15vh;
+    height: 80vh;
+    max-width: 100vw;  
+    width: auto; 
     z-index: 2;
 }
 

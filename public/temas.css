@@ -1,0 +1,58 @@
+:root {
+    --corDeFonte: #35444D;
+    --corDeFonteDois: #7A858B;
+    --corDeFundo: #FAF9F6;
+    --hoverMenu: #7A858B;
+    --corSecundaria: #E8F1F5;
+    --corBotao: #35444D;
+    --corLogo: #353e42;
+    --hoverMenuInicial: #c0cdd4;
+}
+
+html.dark {
+    --corDeFonte: #C5D0D6;
+    --corDeFonteDois: #8A9BA8;
+    --corDeFundo: #0F161D;
+    --hoverMenu: #B7C9D3;
+    --corSecundaria: #1E2A35;
+    --corBotao: #C5D0D6;
+    --corLogo: #E4EAEE;
+    --hoverMenuInicial: #B4C7CF;
+}
+
+.tema{
+    position: absolute;
+    display: grid;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border: none;
+    user-select: none;
+}
+.sol{
+    margin: 10px;
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.lua{
+    margin: 10px;
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.tema img{
+    height: 40px;
+    aspect-ratio: 1/1;
+}
+
+.lua{ display: none; }
+
+html.dark .sol{ display: none; }
+html.dark .lua{ display: inline; }

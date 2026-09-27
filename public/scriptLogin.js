@@ -7,6 +7,7 @@ import {
 //confere se esta no campo de cadastro ou de login
 const formCadastro = document.getElementById("formCadastro");
 const formLogin = document.getElementById("formLogin");
+const erro = document.getElementById('alerta');
 
 
 
@@ -38,7 +39,8 @@ formCadastro.addEventListener("submit", async(e) => {
     e.preventDefault()
 
 if (senhaInput.value !== confirma.value){
-    alert("As senhas não coincidem! Por favor, verifique");
+    erro.textContent = "As senhas não coincidem, por favor verifique!";
+    erro.classList.add('visivel');
     return;
 }
 
@@ -92,20 +94,25 @@ if (formLogin) {
 function tratarErrorsFirebase(code) {
          switch (code) {
             case "auth/email-already-in-use":
-            alert("Este e-mail já está cadastrado.");
+            erro.textContent = "Este e-mail já está cadastrado.";
+            erro.classList.add('visivel');
             break;
             case "auth/invalid-email":
-            alert("Formato de e-mail inválido.");
+            erro.textContent = "Formato de e-mail invalido"
+            erro.classList.add('visivel')
             break;
             case "auth/weak-password":
-            alert("A senha precisa ter no mínimo 6 caracteres.");
+            erro.textContent.add = "A senha precisa ter no mínimo 6 caracteres.";
+            erro.classList.add('visivel')
             break;
             case "auth/invalid-credential":
             case "auth/user-not-found":
             case "auth/wrong-password":
-            alert("E-mail ou senha incorretos.");
+            erro.textContent = "E-mail ou senha incorretos.";
+            erro.classList.add('visivel')
             break;
             default:
-            alert("Erro na autenticação: " + code);
+            erro.textContent =  "Erro na autenticação: " + code;
+            erro.classList.add('visivel')
         }
     }

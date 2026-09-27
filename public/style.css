@@ -2,13 +2,13 @@
 
 b {
     font-family: 'BAHNSCHRIFT', sans-serif;
-    color: #35444D;
+    color: var(--corDeFonteTres);
     font-size: 24px;
 }
 
-button {
+.acesse {
     background-color: transparent;
-    color: --corBotao;
+    color: var(--corBotao);
     border: 1.5px solid --corBotao;
     border-radius: 25px;
     padding: 10px 24px;
@@ -20,13 +20,13 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #35444D;
-    color: #FAF9F6;
+.acesse:hover {
+    background-color: var(--corDeFonteTres);
+    color: var(--corDeFundo);
 }
 
 body {
-    background-color: #FAF9F6;
+    background-color: var(--corDeFundo);
     margin: 0;
     overflow: hidden;
 }

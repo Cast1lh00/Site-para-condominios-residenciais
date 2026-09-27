@@ -1,6 +1,7 @@
 :root {
     --corDeFonte: #35444D;
     --corDeFonteDois: #7A858B;
+    --corDeFonteTres: #35444D;
     --corDeFundo: #FAF9F6;
     --hoverMenu: #7A858B;
     --corSecundaria: #E8F1F5;
@@ -12,6 +13,7 @@
 html.dark {
     --corDeFonte: #C5D0D6;
     --corDeFonteDois: #8A9BA8;
+    --corDeFonteTres: #FAF9F6;
     --corDeFundo: #0F161D;
     --hoverMenu: #B7C9D3;
     --corSecundaria: #1E2A35;
@@ -30,6 +32,7 @@ html.dark {
     background-color: transparent;
     border: none;
     user-select: none;
+    z-index: 10;
 }
 .sol{
     margin: 10px;

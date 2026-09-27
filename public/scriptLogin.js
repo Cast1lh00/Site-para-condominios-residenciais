@@ -10,8 +10,6 @@ const formLogin = document.getElementById("formLogin");
 const erro = document.getElementById('alerta');
 const acerto = document.getElementById('sucesso')
 
-
-
 if (formCadastro){
 
 //campo de cadastro
@@ -90,6 +88,7 @@ if (formLogin) {
                 setTimeout(() => {
                 window.location.href = "tela_Inicial.html";
                 }, 1000);
+                    
             } catch(error){
                 tratarErrorsFirebase(error.code);
             }
@@ -109,7 +108,7 @@ function tratarErrorsFirebase(code) {
             erro.classList.add('visivel')
             break;
             case "auth/weak-password":
-            erro.textContent.add = "A senha precisa ter no mínimo 6 caracteres.";
+            erro.textContent = "A senha precisa ter no mínimo 6 caracteres.";
             erro.classList.add('visivel')
             break;
             case "auth/invalid-credential":

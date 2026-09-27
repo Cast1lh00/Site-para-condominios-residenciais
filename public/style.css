@@ -4,12 +4,13 @@ b {
     font-family: 'BAHNSCHRIFT', sans-serif;
     color: var(--corDeFonteTres);
     font-size: 24px;
+    user-select: none;
 }
 
 .acesse {
     background-color: transparent;
     color: var(--corBotao);
-    border: 1.5px solid --corBotao;
+    border: 1.5px solid var(--corBotao);
     border-radius: 25px;
     padding: 10px 24px;
     font-family: 'BAHNSCHRIFT', sans-serif;
@@ -18,6 +19,7 @@ b {
     letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .acesse:hover {

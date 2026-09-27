@@ -1,6 +1,5 @@
 const botao = document.getElementById("alternar");
 const predio = document.getElementById('predio');
-const predios = document.getElementById('predio');
 
 if(localStorage.getItem('tema') === 'dark'){
     document.documentElement.classList.add('dark');
@@ -15,12 +14,13 @@ predio.src = "assets/predios-noite.svg"
 
 
 if(sessionStorage.getItem('animou-predio')){
-    predios.classList.add('sem-animacao');
+    predio.classList.add('sem-animacao');
     predio.classList.remove('anima-entrada')
 } else {
-    predios.classList.add('anima-entrada');
+    predio.classList.add('anima-entrada');
     sessionStorage.setItem('animou-predio', 'true') 
 }
+
 
 botao.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
@@ -31,3 +31,4 @@ botao.addEventListener('click', () => {
         predio.src = "assets/predios.svg"
     }
 });
+

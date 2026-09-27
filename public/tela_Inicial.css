@@ -2,11 +2,13 @@
 
 body{
     display: grid;
+    grid-template-columns:auto 1fr auto;
     background-color: var(--corDeFundo);
     height: 95vh;
-    width: 95vw;
+    width: 98.5vw;
     padding: 10px;
     margin: 0;
+    max-width: 100vw;
 }
 
 .menu-hamburguer{
@@ -16,12 +18,14 @@ body{
     width: 50px;
     margin: 10px;
     border-radius: 12px;
-    height: 95vh;
     padding: 0;
     border: none;
     list-style: none;
     transition: all 0.3s ease;
     overflow: hidden;
+    animation: abrir 0.5s ease-in-out;
+    height: 95vh;
+    z-index: 10;
 }
 
 
@@ -124,7 +128,7 @@ body{
 
 
 .logo{
-    margin-top: 10px;
+    margin-top: 2px;
     display: flex;
     font-family: 'BAHNSCHRIFT', sans-serif;
     height: 50px;
@@ -157,4 +161,57 @@ body{
     width: 30px;
     aspect-ratio: 1/1;
    filter: brightness(0) invert(26%) sepia(9%) saturate(541%) hue-rotate(159deg) brightness(96%) contrast(89%);
+}
+.pagina{
+    display: flex;
+
+    top: 0;
+    bottom: 0;
+    left: 80px;
+    background-color: var(--corSecundaria);
+    z-index: 10;
+    width: 99.3%;
+    margin-top: 10px;
+    height: 95vh;
+    border-radius: 12px;
+
+}
+
+.lateral{
+    display: flex;
+    position: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;   
+    background-color: var(--corSecundaria);
+    z-index: 10;
+    width: 400px;
+    margin-top: 10px;
+    height: 95vh;
+    border-radius: 12px;
+}
+
+#calendario{
+    display: none;
+}
+#chaves{
+    display: none;
+}
+#contatos{
+    display: none;
+}
+#faq{
+    display: none;
+}
+#config{
+    display: none;
+}
+
+@keyframes abrir {
+    from{
+        height: 50px;
+    }
+    to {
+        height: 95vh;
+    }
 }

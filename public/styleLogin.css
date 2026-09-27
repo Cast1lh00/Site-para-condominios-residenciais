@@ -180,13 +180,6 @@ button:active{
     padding-right: 8px;
 }
 
-#predio{
-    position: absolute;
-    height: 80vh;
-    align-self: self-end;
-    z-index: 2;
-}
-
 aviso{ display: none; }
 
 .ok.visivel{
@@ -229,11 +222,14 @@ aviso{ display: none; }
 
 #predio{
     position: absolute;
+    bottom: 0;
     height: 80vh;
     max-width: 100vw;  
     width: auto; 
     z-index: 2;
+    transition: transform 1.5s ease-in;
 }
+
 
 .anima-entrada {
     animation: subir 0.8s ease-out forwards;
@@ -254,3 +250,4 @@ aviso{ display: none; }
         opacity: 1;
     }
 }
+

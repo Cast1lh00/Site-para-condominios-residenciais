@@ -3,37 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Inicial</title>
+    <title>Document</title>
     <link rel="stylesheet" href="tela_Inicial.css">
 </head>
 <body>
-     <!-- Cabecalho azul com foto de perfil e menu -->
     <header class="cabecalho">
-        <img src="assets/perfil.png">
-        <button class="menu">
-            <span class="hamb"></span>
-            <span class="hamb"></span>
-            <span class="hamb"></span>
-        </button>
-    </header>
-                <span class="divisoriaHorizontal"></span>
-    <!-- menu interativo com as opcoes-->
-        <span class="conteudo_menu">
-            <span class="item1"><img src="assets/calendario.png">CALENDARIO</span>
-            <span class="item2"><img src="assets/chave.png">CHAVES</span>
-            <span class="item3"><img src="assets/contato.png">CONTATOS</span>
-            <span class="item4"><img src="assets/faq.png">FAQ</span>
-        </span>
-     <!-- Article com nome do respectivo edificil e foto do mesmo -->
-        <article class="lateral">
-            <div class="text">
-            <h1>EDIFICIO</h1>
-            <h3>VARANDAS DA ILHA</h3>
-            
-            </div>
-            <img src="assets/placeholder.png">         
 
-        </article>
+        <!--                           menu esquerdo                           -->
+        <nav class="menu">
+            <ul class="menu-hamburguer">
+
+                <li class="logo">
+                    <img class="icone-logo" src="assets/logo.svg">
+                    <span class="texto-logo">EDIFICIO</span>
+                </li>
+                <li class="item">
+                    <img class="icone" src="assets/home.svg">
+                    <span class="texto">INICIO</span>
+                    
+                </li>
+                <li class="item">
+                    <img class="icone" src="assets/calendario.svg">
+                    <span class=texto>CALENDARIO</span>
+                    
+                </li>
+                <li class="item">
+                    <img class="icone" src="assets/chave.svg">
+                    <span class="texto">CHAVES</span>
+                    
+                </li>
+                <li class="item">
+                    <img class="icone" src="assets/contato.svg">
+                    <span class="texto">CONTATOS</span>
+                    
+                </li>
+                <li class="item">
+                    <img class="icone-faq" src="assets/faq.svg">
+                    <span class="texto">FAQ</span>
+                    
+                </li>
+                <li class="configuracoes">
+                    <img class="icone" src="assets/engrenagem.svg">
+                    <span class="texto">CONFIG</span>
+                </li>
+            </ul>
+        </nav>
+        <!-- ------------------------------------------------------------------ -->
+
+    </header>
+    
 </body>
-<script type="module" src="tela_Inicial.js"></script>
 </html>

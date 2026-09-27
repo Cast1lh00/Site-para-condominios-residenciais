@@ -1,227 +1,153 @@
-@font-face {
-  font-family: 'BAHNSCHRIFT';
-  src: url('fonts/BAHNSCHRIFT.TTF') format('typetrue');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body{
+    display: grid;
+    background-color: #FAF9F6;
+    height: 95vh;
+    width: 95vw;
+    padding: 10px;
     margin: 0;
-    display: flex;
-    background-color: #FAF9F6; 
-    display: flex;         
+}
+
+.menu-hamburguer{
+    display: block;
+    position: relative;
+    background-color: #E8F1F5;
+    width: 58px;
+    margin: 10px;
+    border-radius: 12px;
+    height: 95vh;
+    padding: 0;
+    border: none;
+    list-style: none;
+    transition: all 0.3s ease;
     overflow: hidden;
-    flex-direction: column; 
-    width: 100vw;
+}
+
+
+.item{
+    margin-left: 6px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'BAHNSCHRIFT';
+    height: 50px;
+    width: 190px;
+    font-size: larger;
+    color: #7A858B;
+    align-items: center;
+    padding-left: 10px;
+    gap: 18px;
+}
+
+.item:hover{
+    background-color: #d6e1e6;
+}
+
+.configuracoes{
+    margin-left: 6px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    font-family: 'BAHNSCHRIFT';
+    height: 50px;
+    width: 190px;
+    font-size: larger;
+    color: #7A858B;
+    align-items: center;
+    padding-left: 10px;
+    align-content: end;
+    gap: 18px;
 
 }
-.cabecalho{
-    margin-top: 10px;
-    background-color: #E8F1F5;
-    border-radius: 12px;
-    width: 98vw;
-    height: 55px;
-    gap: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+
+.configuracoes:hover{
+    background-color: #d6e1e6;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
-.hamb {
+
+
+/* botao caso queira
+.botao{
+    width: 30px;
+    aspect-ratio: 1/1;  
+    margin: 10px;
+    margin-bottom: 40px;
+    align-self: start;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+.botao:hover{
+    cursor: pointer;
+}
+.botao:active{
+    rotate: 45deg;
+}
+
+
+.linha{
+    bottom: 40%;
+    display:flex;
+    position: absolute;
     background-color: #9AAEB8;
     width: 30px;
     height: 6px;
-    display: block;
     border-radius: 12px;
+    margin: 0;
+    padding: 0;
 
 }
-.menu{
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 30px;
-    gap: 5px;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-    background-color: transparent;
-    border: none;
-}
-.menu:hover{
-    cursor: pointer;
-}
-
-.menu.ativo {
-    transform: rotate(90deg);
-}
-
-.conteudo_menu{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 250px;
-    width: 100px;
-    margin-left: 40px;
-    margin-top: 70px;
-    position: absolute
-}
-.item1{
-    display: flex;
-    text-align: flex-start;
-    background-color: #E8F1F5;
-    padding: 20px;
-    width: 170px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    font-family: 'BAHNSCHRIFT', sans-serif;
-    color: #9AAEB8;
-    transform: translateX(-300px);
-    gap: 10px;
-}
-.item2{
-    display: flex;
-    text-align: flex-start;
-    background-color: #E8F1F5;
-    padding: 20px;
-    width: 170px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    font-family: 'BAHNSCHRIFT', sans-serif;
-    color: #9AAEB8;
-    transform: translateX(-300px);
-    transition-delay: 0.1s;
-    gap: 10px;
-    
-}
-.item3{
-    display: flex;
-    text-align: flex-start;
-    background-color: #E8F1F5;
-    padding: 20px;
-    width: 170px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    font-family: 'BAHNSCHRIFT', sans-serif;
-    color: #9AAEB8;
-    transform: translateX(-300px);
-    transition-delay: 0.2s;
-    gap: 10px;
-}
-.item4{
-    display: flex;
-    text-align: flex-start;
-    background-color: #E8F1F5;
-    padding: 20px;
-    width: 170px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-    font-family: 'BAHNSCHRIFT', sans-serif;
-    color: #9AAEB8;
-    transform: translateX(-300px);
-    transition-delay: 0.3s;
-    gap: 10px;
-}
-
-.item1.ativo{
-    transform: translateX(10px);
-}
-.item2.ativo{
-    transform: translateX(10px);
-    transition-delay: 0.1s;
-}
-.item3.ativo{
-    transform: translateX(10px);
-    transition-delay: 0.2s;
-}
-.item4.ativo{
-    transform: translateX(10px);
-    transition-delay: 0.3s;
-}
-.item1:hover{ 
-    transform: translateX(30px);
-    transition-delay: 0;
-    cursor: pointer;
-}
-.item2:hover{
-    transform: translateX(30px);
-    transition-delay: 0;
-    cursor: pointer;
-}
-.item3:hover{
-    transform: translateX(30px);
-    transition-delay: 0;
-    cursor: pointer;
-}
-.item4:hover{
-    transform: translateX(30px);
-    transition-delay: 0;
-    cursor: pointer;
-}
-.item1 img{
-    width: auto;
-    height: 20px;
-}
-.item2 img{
-    width: auto;
-    height: 20px;
-}
-.item3 img{
-    width: auto;
-    height: 20px;
-}
-.item4 img{
-    width: auto;
-    height: 15px;
-}
-
-.divisoriaHorizontal{
-    background-color: #9AAEB8;
-    height: 80vh;
-    width: 3px;
-    margin-left: 70vw;
-    margin-top: 80px    ;
-    position:absolute;
-    border-radius: 12px;
-
-}
-
-.lateral{
-    margin-left: 73vw;
-    margin-top: 50px;
-    background-color: transparent;
-    font-family: 'BAHNSCHRIFT';
-    display: flex;
-    flex-direction: column;
-}
-.lateral img{
-    width: 385px;
-    height: 385px;
-}
-
-h1{
-    font-size: 100px;
-    display: flex;
-    flex-direction: column;
-    color: #35444D;
-    line-height: 0.85px;
-    text-align: start;
-}   
-
-h3{
-    font-size: 43px;
-    display: flex;
-    flex-direction: column;
-    color: #35444D;
-    line-height: 0.85px;
-    text-align: start;
-}
-
-.cabecalho img{
-    height: auto;
-    width: 35px;
-    align-self: end;
+.linha-um{
+    bottom: 40%;
     position: absolute;
-    margin-right: 10px;
+    display:flex;
+    background-color: #9AAEB8;
+    width: 30px;
+    height: 6px;
+    border-radius: 12px;
+    transform: rotate(90deg);
+    margin: 0;
+    padding: 0;
+}
+*/
+
+
+.logo{
+    margin-left: 5px;
+    margin-top: 10px;
+    display: flex;
+    font-family: 'BAHNSCHRIFT';
+    height: 50px;
+    width: 190px;
+    font-size: x-large;
+    color: #353e42;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: 1000;
+    gap: 18px;
+    margin-bottom: 50px;
+}
+
+.menu-hamburguer:hover{
+    width: 200px;
+}
+
+.icone{
+    width: 25px;
+    aspect-ratio: 1/1;
+   filter: brightness(0) invert(47%) sepia(9%) saturate(541%) hue-rotate(156deg) brightness(93%) contrast(88%);
+}
+.icone-faq{
+    width: 25px;
+    aspect-ratio: 1/1;
+   filter: brightness(0) invert(47%) sepia(9%) saturate(541%) hue-rotate(156deg) brightness(93%) contrast(88%);
+}
+.icone-logo{
+    width: 30px;
+    aspect-ratio: 1/1;
+   filter: brightness(0) invert(26%) sepia(9%) saturate(541%) hue-rotate(159deg) brightness(96%) contrast(89%);
 }

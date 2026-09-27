@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="temas.css">
 
-    <script>
+    <script type="module" src="predio.js">
+        
+
         if(localStorage.getItem('tema') === 'dark'){
             document.documentElement.classList.add('dark');
         }
+
+
+    
     </script>
 
 </head>
@@ -21,6 +26,8 @@
             <img class="lua" src="assets/lua.svg" ></img>
         </button>
 
+        <img class="anima-entrada" id="predio">
+        
 
     <div class="fundo-animado">
 
@@ -37,10 +44,14 @@
 
     </div>
 
-        <div class="aviso" id="alerta"></div>
+
+
+        
 
     
     <section class="conteudo">
+        <div class="aviso" id="alerta"></div>
+        <div class="ok" id="sucesso"></div>
         <form id="formLogin">
                 <div class="campos">
                     <div class="email">
@@ -68,8 +79,9 @@
                 </div>
         </form>
     </section>  
+
+
 </body>
 
 <script type="module" src="scriptLogin.js"> </script>
-<script type="module" src="tema.js"></script>
 </html>

@@ -8,6 +8,7 @@ import {
 const formCadastro = document.getElementById("formCadastro");
 const formLogin = document.getElementById("formLogin");
 const erro = document.getElementById('alerta');
+const acerto = document.getElementById('sucesso')
 
 
 
@@ -46,7 +47,9 @@ if (senhaInput.value !== confirma.value){
 
 try {
       const userCredential = await createUserWithEmailAndPassword(auth, emailInput.value, senhaInput.value);
-      alert("Cadastro realizado com sucesso!");
+      acerto.textContent = "Cadastro realizado com sucesso!";
+      erro.classList.remove('visivel')
+      acerto.classList.add('visivel')
       window.location.href = "index.html";
     } catch (error) {
       tratarErrorsFirebase(error.code);
@@ -81,8 +84,12 @@ if (formLogin) {
             
             try {
                 await signInWithEmailAndPassword(auth, email.value, senha.value);
-                alert("Login realizado com sucesso")
-                window.location.href = "tela_Inicial.html"
+                acerto.textContent = "Login realizado com sucesso!";
+                erro.classList.remove('visivel')
+                acerto.classList.add('visivel')
+                setTimeout(() => {
+                window.location.href = "tela_Inicial.html";
+                }, 1000);
             } catch(error){
                 tratarErrorsFirebase(error.code);
             }

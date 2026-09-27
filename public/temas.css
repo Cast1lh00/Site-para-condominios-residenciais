@@ -34,6 +34,10 @@ html.dark {
     user-select: none;
     z-index: 10;
 }
+
+.tema:hover{
+    cursor: pointer;
+}
 .sol{
     margin: 10px;
     position: absolute;
@@ -53,9 +57,14 @@ html.dark {
 .tema img{
     height: 40px;
     aspect-ratio: 1/1;
+    z-index: 10;
 }
 
 .lua{ display: none; }
 
+.prediosNoite{ display: none;}
+
+html.dark .predios{display: none;}
+html.dark .prediosNoite{display: block;}
 html.dark .sol{ display: none; }
 html.dark .lua{ display: inline; }

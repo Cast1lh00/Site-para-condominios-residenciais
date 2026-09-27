@@ -2,6 +2,7 @@
 
 section{
     background-color: var(--corSecundaria);
+    position: relative;
     display: flex;
     margin: 40px;
     border-radius: 10px;
@@ -32,6 +33,7 @@ body{
     align-items: center;      
     min-height: 100vh;  
     overflow: hidden; 
+    position: relative  ;
     z-index: 2;  
 }
 
@@ -131,21 +133,19 @@ a {
     width: 40vw;
     max-height: 400px;
     max-width: 275px;
-    min-height: 300px;
+    min-height: 400px;
     min-width: 250px;
 }
 button:active{
     opacity: 0.8;
 }
 
-.aviso{
-    display: none;
-}
+.aviso{ display: none; }
 
 .aviso.visivel{
     display: flex;
     position: absolute;
-    top: 225px;
+    top: -40px;
     background-color: rgba(235, 153, 157, 0.7);
     color: var(--corDeFonte);
     align-self: center;
@@ -160,14 +160,12 @@ button:active{
     padding-right: 8px;
 }
 
-.avisoCad{
-    display: none;
-}
+.avisoCad{ display: none; }
 
 .avisoCad.visivel{
     display: flex;
     position: absolute;
-    top: 22vh;
+    top: -60px;
     background-color: rgba(235, 153, 157, 0.7);
     color: var(--corDeFonte);
     align-self: center;
@@ -182,3 +180,76 @@ button:active{
     padding-right: 8px;
 }
 
+#predio{
+    position: absolute;
+    height: 80vh;
+    align-self: self-end;
+    z-index: 2;
+}
+
+aviso{ display: none; }
+
+.ok.visivel{
+    display: flex;
+    position: absolute;
+    top: -40px;
+    background-color: rgba(167, 235, 153, 0.7);
+    color: var(--corDeFonte);
+    align-self: center;
+    justify-self: center;
+    border-radius: 12px;
+    padding: 6px;
+    min-width: 250px;
+    align-content: center;
+    justify-content: center;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.okCad{ display: none; }
+
+.okCad.visivel{
+    display: flex;
+    position: absolute;
+    top: -60px;
+    background-color: rgba(167, 235, 153, 0.7);
+    color: var(--corDeFonte);
+    align-self: center;
+    justify-self: center;
+    border-radius: 12px;
+    padding: 6px;
+    min-width: 250px;
+    align-content: center;
+    justify-content: center;
+    font-family: 'BAHNSCHRIFT', sans-serif;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#predio{
+    position: absolute;
+    height: 80vh;
+    align-self: self-end;
+    z-index: 2;
+}
+
+.anima-entrada {
+    animation: subir 1.2s ease-out forwards;
+}
+
+.sem-animacao {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -18,6 +18,25 @@ function mudarDePagina(atual){
     }
 }
 
+const botao = document.getElementById('botao')
 
+if (localStorage.getItem('tema') === 'dark') {
+    document.documentElement.classList.add('dark');
+}
+if(botao){
+botao.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('tema', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    
+});
+}
+
+/*function mudarTema(){
+    console.log('tema alterado')
+if (localStorage.getItem('tema') === 'dark') {
+    document.documentElement.classList.add('dark');
+}
+    localStorage.setItem('tema', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+};*/
 
 window.mudarDePagina = mudarDePagina;

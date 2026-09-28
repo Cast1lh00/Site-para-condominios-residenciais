@@ -125,3 +125,4 @@ function tratarErrorsFirebase(code) {
             erro.classList.add('visivel')
         }
     }
+

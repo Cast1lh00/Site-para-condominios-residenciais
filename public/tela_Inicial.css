@@ -288,20 +288,89 @@ html.dark .ligado {display: inline}
     margin: 15px;
 }
 
-#calendario{
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-rolavel{
     display: none;
 }
-#chaves{
+
+.cabeca{
     display: none;
 }
-#contatos{
+.pagina.ativa .cabeca{
+    display: inline;
+    width: 89%;
+    background-color: var(--corCabeca);
+    color: var(--corDeFonte);
+    font-family: 'BAHNSCHRIFT'; 
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 7px;
+}
+
+.pagina.ativa .menu-rolavel{
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: var(--corDeFonteDois);
+    width: 90%;
+    height: 80%;
+    border-radius: 12px;
+    overflow: auto;
+    margin-bottom: 20px;
+    position: relative;
+    gap: 10px;
+
+}
+
+.menu-rolavel {
+  overflow-y: scroll;
+  scrollbar-width: 15px;
+  scrollbar-color: #536d80 transparent;
+}
+.menu-rolavel::-webkit-scrollbar-button{
     display: none;
 }
-#faq{
-    display: none;
+
+.pagina.ativa .imgAnuncio {
+    width: 100px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border-radius: 4px;
 }
-#config{
-    display: none;
+
+.pagina.ativa .anuncio {
+    width: 100%;
+    max-height: 500px;
+    background-color: var(--fundoAnuncio);
+    border-radius: 12px;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.pagina.ativa .anuncio .textoAnuncio {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: sans-serif; 
+    font-weight: 700;
+    color: var(--fonteTextoAnuncio);
+    flex-grow: 1; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5; 
+    overflow: hidden;
 }
 
 

@@ -8,7 +8,8 @@ import {
 const formCadastro = document.getElementById("formCadastro");
 const formLogin = document.getElementById("formLogin");
 const erro = document.getElementById('alerta');
-const acerto = document.getElementById('sucesso')
+const acerto = document.getElementById('sucesso');
+const predio = document.getElementById('predio');
 
 if (formCadastro){
 
@@ -47,7 +48,7 @@ try {
       const userCredential = await createUserWithEmailAndPassword(auth, emailInput.value, senhaInput.value);
       acerto.textContent = "Cadastro realizado com sucesso!";
       erro.classList.remove('visivel')
-      acerto.classList.add('visivel')
+      acerto.classList.add('visivel') 
       window.location.href = "index.html";
     } catch (error) {
       tratarErrorsFirebase(error.code);
@@ -83,8 +84,10 @@ if (formLogin) {
             try {
                 await signInWithEmailAndPassword(auth, email.value, senha.value);
                 acerto.textContent = "Login realizado com sucesso!";
+                sessionStorage.setItem('animou-predio', 'false') 
                 erro.classList.remove('visivel')
                 acerto.classList.add('visivel')
+                predio.classList.add('anima-saida');
                 setTimeout(() => {
                 window.location.href = "tela_Inicial.html";
                 }, 1000);

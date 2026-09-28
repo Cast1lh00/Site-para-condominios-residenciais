@@ -230,7 +230,9 @@ aviso{ display: none; }
     transition: transform 1.5s ease-in;
 }
 
-
+.anima-saida {
+    animation: descer 0.8s ease-out forwards;
+}
 .anima-entrada {
     animation: subir 0.8s ease-out forwards;
 }
@@ -240,6 +242,13 @@ aviso{ display: none; }
     opacity: 1;
 }
 
+@keyframes descer{
+    from{
+        transform: translateY(0);
+    } to {
+        transform: translateY(100%);
+    }
+}
 @keyframes subir {
     from {
         transform: translateY(100%);
@@ -252,7 +261,7 @@ aviso{ display: none; }
 }
 
 /* ---------- celular ---------- */
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     section,
     #caixaCadastro {
         width: 85vw;
@@ -262,8 +271,7 @@ aviso{ display: none; }
     }
 
     #predio {
-        height: 55vh;
-        bottom: -50px;
+        height: 30dvh;
     }
 
     .aviso.visivel,

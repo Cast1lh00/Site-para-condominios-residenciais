@@ -39,9 +39,10 @@ body{
     font-size: larger;
     color: var(--corDeFonteDois);
     align-items: center;
-    padding-left: 10px;
+    padding-left: 13px;
     gap: 18px;
     user-select: none;
+    cursor: pointer;
 }
 
 .item:hover{
@@ -61,10 +62,11 @@ body{
     font-size: larger;
     color: var(--corDeFonteDois);
     align-items: center;
-    padding-left: 10px;
+    padding-left: 13px;
     align-content: end;
     gap: 18px;
     user-select: none;
+    cursor: pointer;
 
 }
 
@@ -162,9 +164,12 @@ body{
     aspect-ratio: 1/1;
    filter: brightness(0) invert(26%) sepia(9%) saturate(541%) hue-rotate(159deg) brightness(96%) contrast(89%);
 }
-.pagina{
-    display: flex;
 
+.pagina{ display: none; }
+
+.pagina.ativa{
+    display: flex !important;
+    flex-direction: column;
     top: 0;
     bottom: 0;
     left: 80px;
@@ -174,7 +179,8 @@ body{
     margin-top: 10px;
     height: 95vh;
     border-radius: 12px;
-
+    animation: main 0.5s ease-in;
+    overflow: hidden;
 }
 
 .lateral{
@@ -192,6 +198,7 @@ body{
     border-radius: 12px;
     align-items: center;
     overflow: hidden;
+    
 }
 
 
@@ -244,6 +251,17 @@ body{
     display: none;
 }
 
+@keyframes main {
+    from{
+        width: 0;
+        height: 0;
+    } to {
+        width: 99.3%;
+        height: 95vh;
+    }
+    
+}
+
 @keyframes abrir {
     from{
         height: 50px;
@@ -254,7 +272,7 @@ body{
 }
 
 /* ---------- celular ---------- */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;

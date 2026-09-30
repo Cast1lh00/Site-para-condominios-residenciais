@@ -1,4 +1,20 @@
 const paginas = document.querySelectorAll('.pagina')
+const marcador = document.getElementById('marcador')
+const casa = document.getElementById('home')
+const inicio = document.getElementById('casa')
+let nomeTexto = casa.getAttribute('data-pagina')
+let paginaAtual = document.getElementById(nomeTexto)
+
+
+if (casa.classList.contains('ativa')){
+    console.log(inicio+'esse he o inicio')
+    const lugar = inicio.offsetTop;
+    const altura = inicio.offsetHeight;
+    
+    marcador.style.transform = `translateY(${lugar}px)`;
+    marcador.style.height = `${altura}px`;
+}
+
 
 function mudarDePagina(atual){
     paginas.forEach(p => {
@@ -16,7 +32,17 @@ function mudarDePagina(atual){
     } else {
         console.error("id nao existe")
     }
+
+    if(marcador && atual){
+        const posicaoTopo = atual.offsetTop;
+        const largura = atual.offsetHeight;
+
+        marcador.style.transform = `translateY(${posicaoTopo}px`;
+        marcador.style.height = `${largura}px`; 
+    }
+
 }
+
 
 const botao = document.getElementById('botao')
 

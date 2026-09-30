@@ -25,15 +25,27 @@ body{
     overflow: hidden;
     animation: abrir 0.5s ease-in-out;
     height: 95vh;
-    z-index: 10;
+    z-index: 9;
 }
 
+#marcador{
+    display: block;
+    position: absolute;
+    background-color: #B4C7CF;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 200px;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
 
 .item{
 
     display: flex;
     flex-direction: row;
     font-family: 'BAHNSCHRIFT', sans-serif;
+    position: relative;
     height: 50px;
     width: 190px;
     font-size: larger;
@@ -43,6 +55,7 @@ body{
     gap: 18px;
     user-select: none;
     cursor: pointer;
+    z-index: 11;
 }
 
 .item:hover{
@@ -67,6 +80,7 @@ body{
     gap: 18px;
     user-select: none;
     cursor: pointer;
+    z-index: 11;
 
 }
 

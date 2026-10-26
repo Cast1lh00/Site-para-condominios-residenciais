@@ -6,9 +6,9 @@ if(localStorage.getItem('tema') === 'dark'){
 }
 
 if (document.documentElement.classList.contains('dark')){
-predio.src = "assets/predios-noite.svg"
+predio.src = "../assets/predios-noite.svg"
 } else {
-    predio.src = "assets/predios.svg"
+    predio.src = "../assets/predios.svg"
 }
 
 
@@ -26,9 +26,9 @@ botao.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
     localStorage.setItem('tema', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
     if (document.documentElement.classList.contains('dark')){
-    predio.src = "assets/predios-noite.svg"
+    predio.src = "../assets/predios-noite.svg"
     } else {
-        predio.src = "assets/predios.svg"
+        predio.src = "../assets/predios.svg"
     }
 });
 
